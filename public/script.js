@@ -20,7 +20,7 @@ function timeUntil(hours, minutes) {
   if(hours<0){
     hours=24+hours;
   }
-  return `${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+  return `${hours}|${minutes}|${seconds}`;
 }
 
 function flexDay() {
@@ -89,7 +89,8 @@ function replaceClock() {
     var classData = classList[period];
     nextH = classData.eHour;
     nextM = classData.eMin;
-    replaceText = timeUntil(nextH, nextM);
+    replaceText = timeUntil(nextH, nextM).split("|");
+    
     replaceClass = classData.name + " Ending in";
     //menuMessage="Ending in";
   }
@@ -104,13 +105,15 @@ function replaceClock() {
       
     nextH = classData.sHour;
     nextM = classData.sMin;
-    replaceText = timeUntil(nextH, nextM);
+    replaceText = timeUntil(nextH, nextM).split("|");
     replaceClass = classData.name + " Starting in";
     //menuMessage="Starting in";
   }
 //  console.log(replaceText);
   //document.getElementById("menuMessage").innerText = menuMessage;
-  document.getElementById("MainClockText").innerText = replaceText;
+  document.getElementById("hours").innerText = replaceText[0]+" Hours";
+  document.getElementById("minutes").innerText = replaceText[1]+" Minutes";
+  document.getElementById("seconds").innerText = replaceText[2]+" Seconds";
   document.getElementById("class").innerText = replaceClass;
 }
 replaceClock();
