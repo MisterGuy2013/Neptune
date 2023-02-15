@@ -1,4 +1,4 @@
-
+var noHour=false;
 
 
 function getCurrentTime() {
@@ -19,6 +19,9 @@ function timeUntil(hours, minutes) {
   var seconds = 60 - date.getSeconds();
   if(hours<0){
     hours=24+hours;
+  }
+  if(noHour==true){
+    minutes=minutes+(60*hours);
   }
   return `${hours}|${minutes}|${seconds}`;
 }
@@ -111,10 +114,23 @@ function replaceClock() {
   }
 //  console.log(replaceText);
   //document.getElementById("menuMessage").innerText = menuMessage;
-  document.getElementById("hours").innerText = replaceText[0]+" Hours";
-  document.getElementById("minutes").innerText = replaceText[1]+" Minutes";
-  document.getElementById("seconds").innerText = replaceText[2]+" Seconds";
+  document.getElementById("hours").innerText = replaceText[0];
+  document.getElementById("minutes").innerText = replaceText[1];
+  document.getElementById("seconds").innerText = replaceText[2];
   document.getElementById("class").innerText = replaceClass;
 }
+
+function checkResize(){
+  if(window.innerWidth <= 600){
+    noHour=true;
+  }
+  else{
+    noHour=false;
+  }
+}
+
+
 replaceClock();
 setInterval(replaceClock,100);
+
+window.addEventListener("resize", checkResize);

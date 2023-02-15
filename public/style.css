@@ -17,7 +17,7 @@ p{
   text-shadow:var(--c4) 0px 0px 5px;
 }
 #main{
-  font-size:5vw;
+  font-size:7vw;
 }
 #mainSec{
   font-size:7vw;
@@ -30,33 +30,50 @@ p{
 }
 #MainClockText{
   display: grid;
-        grid-template-rows: 100px; /* make 2 rows of equal size */
-        grid-template-columns: 1fr 1fr 1fr; /* make 3 columns of equal size */
+        grid-template-rows: 10vh 10vh; /* make 2 rows of equal size */
+        grid-template-columns: 1fr 0.1fr 1fr 0.1fr  1fr; /* make 3 columns of equal size */
         grid-gap: 5px; /* same size gap between rows and columns */
         justify-items: center; /* center content horizontally */
         align-items: center; /* align content at the beginning of each column */
 }
+.colon{
+  font-size:7vw;
+}
+.label{
+  font-size:2vw;
+  text-shadow:var(--c4) 0px 0px 2px;
+}
 
 
-
-    @media screen and (max-width: 900px) {
-
-        #MainClockText {
-          font-size:10vw;
-            grid-template-rows: 18vh 18vh 18vh; /* create 6 rows of equal size */
-            grid-template-columns: 100%; /* this is one column at 100% width */
-            grid-gap: 5px;
-            justify-items: center; /* make content start at the beginning of each row */
-            align-items: center; /* make the content centered vertically */
-        }
-
+@media screen and (max-width: 900px) {
+    .label{
+      font-size:4vw;
     }
+      #MainClockText {
+          font-size:13vw;
+        }
+  .colon{
+  font-size:10vw;
+}
+
+}
 
 @media screen and (max-width: 600px) {
+  
   #MainClockText {
+    grid-template-columns:1fr 0.1fr  1fr;
     font-size:15vw;
   }
   #mainSec{
     font-size:10vw;
+  }
+  .colon{
+    font-size:15vw;
+  }
+  .label{
+      font-size:6vw;
+    }
+  .hourSetup{
+    display:none;
   }
 }
