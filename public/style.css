@@ -4,7 +4,16 @@
   --c3:#F58A07;
   --c4:#F9AB55;
   --c5:#F7F5FB;
+  --c6:#74481b;;
 }
+
+@font-face {
+    font-family: sfpro;
+  font-style: normal;
+  font-weight: normal;
+    src: url("https://neptune.misterguy2013.repl.co/font/SF-Pro.otf") format("opentype");
+}
+
 
 
 body{
@@ -12,10 +21,60 @@ body{
 }
 
 p{
-  font-family:-apple-system;
+  font-family:sfpro;
   color:var(--c3);
   text-shadow:var(--c4) 0px 0px 5px;
 }
+#menu{
+  border-radius:10px;
+  width:100px;
+  height:90px;
+  position:absolute;
+  top:2%;
+  background-color:var(--c1);
+}
+#svg{
+  width:90%;
+  height:90%;
+}
+
+#svg{
+  position: relative;
+  display: inline-block;
+}
+
+#dropdown {
+  border-radius:10px;
+  display: none;
+  
+  position: absolute;
+  background-color: var(--c1);
+  color:var(--c6);
+  min-width: 15vw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdownContent{
+  font-size:20px;
+  color:black;
+  text-shadow:black 0px 0px 0px;
+}
+
+#dropdown.active {
+  display: grid;
+   grid-template-rows: 10vh; 
+        grid-template-columns: 1fr; 
+        grid-gap: 5px;
+        justify-items: flex-start;
+        align-items: flex-start;
+}
+
+
+
+
+
+
 #main{
   font-size:7vw;
 }
@@ -28,13 +87,16 @@ p{
 #class{
   text-shadow:var(--c4) 0px 0px 4px;
 }
+
+
+
 #MainClockText{
   display: grid;
-        grid-template-rows: 10vh 10vh; /* make 2 rows of equal size */
-        grid-template-columns: 1fr 0.1fr 1fr 0.1fr  1fr; /* make 3 columns of equal size */
-        grid-gap: 5px; /* same size gap between rows and columns */
-        justify-items: center; /* center content horizontally */
-        align-items: center; /* align content at the beginning of each column */
+        grid-template-rows: 10vh 10vh; 
+        grid-template-columns: 1fr 0.1fr 1fr 0.1fr  1fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
 }
 .colon{
   font-size:7vw;
@@ -75,5 +137,18 @@ p{
     }
   .hourSetup{
     display:none;
+  }
+
+  #menu{
+  border-radius:10px;
+  width:80px;
+  height:72px;
+  position:absolute;
+  top:70%;
+  background-color:var(--c1);
+  }
+  #svg{
+    width:90%;
+    height:90%;
   }
 }

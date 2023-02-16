@@ -1,5 +1,11 @@
 var noHour=false;
 
+var titleSet = (localStorage.getItem('title')=="true") ? true: false;
+document.getElementById("titleBox").checked = titleSet;
+function updateCheckbox(){
+  titleSet = document.getElementById("titleBox").checked;
+  localStorage.setItem("title", titleSet);
+}
 
 function getCurrentTime() {
   return Date.get();
@@ -7,6 +13,7 @@ function getCurrentTime() {
 function getTimeInSeconds() {
   return getCurrentTime() / 1000;
 }
+
 
 function timeUntil(hours, minutes) {
   var date = new Date;
@@ -118,6 +125,12 @@ function replaceClock() {
   document.getElementById("minutes").innerText = replaceText[1];
   document.getElementById("seconds").innerText = replaceText[2];
   document.getElementById("class").innerText = replaceClass;
+  if(titleSet==true){
+  document.title = `${replaceText[0]}:${replaceText[1]}:${replaceText[2]}`;
+  }
+  else{
+    document.title="Neptune";
+  }
 }
 
 function checkResize(){
