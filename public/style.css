@@ -108,6 +108,9 @@ p{
 
 
 @media screen and (max-width: 900px) {
+  #dropdown{
+    min-width: 50vw;
+  }
     .label{
       font-size:4vw;
     }
@@ -117,10 +120,25 @@ p{
   .colon{
   font-size:10vw;
 }
+  #menu{
+  border-radius:10px;
+  width:80px;
+  height:72px;
+  position:absolute;
+  top:70%;
+  background-color:var(--c1);
+  }
+  #svg{
+    width:90%;
+    height:90%;
+  }
 
 }
 
 @media screen and (max-width: 600px) {
+  #dropdown{
+    min-width: 90vw;
+  }
   
   #MainClockText {
     grid-template-columns:1fr 0.1fr  1fr;
@@ -139,16 +157,5 @@ p{
     display:none;
   }
 
-  #menu{
-  border-radius:10px;
-  width:80px;
-  height:72px;
-  position:absolute;
-  top:70%;
-  background-color:var(--c1);
-  }
-  #svg{
-    width:90%;
-    height:90%;
-  }
+  
 }
