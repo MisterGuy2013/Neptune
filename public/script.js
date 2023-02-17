@@ -1,11 +1,38 @@
 var noHour=false;
 
+
+//Menu items
 var titleSet = (localStorage.getItem('title')=="true") ? true: false;
+var textColor=localStorage.getItem("textColor");
+if(textColor==undefined){
+  textColor="#F58A07";
+}
+var root = document.querySelector(':root');
+root.style.setProperty('--c3', textColor);
+document.getElementById("textColor").value=textColor;
+
+function updateColors(){
+  console.log("E");
+  root.style.setProperty('--c3', document.getElementById("textColor").value);
+  localStorage.setItem("textColor", document.getElementById("textColor").value);
+  
+}
+
+
+
 document.getElementById("titleBox").checked = titleSet;
 function updateCheckbox(){
   titleSet = document.getElementById("titleBox").checked;
   localStorage.setItem("title", titleSet);
 }
+
+
+
+
+
+
+
+
 
 function getCurrentTime() {
   return Date.get();

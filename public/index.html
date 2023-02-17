@@ -39,9 +39,17 @@
   <path class="cls-1" id="line3" d="m15,391.62c76.4,0,139.82,0,229.19,0,82.3,0,164.61,0,246.91,0"/>
 </svg>
   </center>
+
+  
   <div id="dropdown">
     <div>
     <label for="titleBox" class="dropdownContent">Show Time in Title </label><input type="checkbox" id="titleBox" class="dropdownContent" onclick="updateCheckbox()">
+    </div>
+
+    
+    <div>
+      <label class="dropdownContent" for="textColor">Text Color:</label>
+  <input onchange="updateColors()" type="color" id="textColor" value="#F58A07">
     </div>
   </div>
 </div>
@@ -92,7 +100,8 @@
         
       </div>
     </center>
-    
+
+
     <script src="script.js"></script>
     <script src="neptuneMenu.js"></script>
     </body>

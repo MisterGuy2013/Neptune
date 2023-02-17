@@ -23,7 +23,7 @@ body{
 p{
   font-family:sfpro;
   color:var(--c3);
-  text-shadow:var(--c4) 0px 0px 5px;
+  text-shadow:var(--c3) 0px 0px 15px;
 }
 #menu{
   border-radius:10px;
@@ -63,7 +63,7 @@ p{
 
 #dropdown.active {
   display: grid;
-   grid-template-rows: 10vh; 
+   grid-template-rows: 1fr,1fr; 
         grid-template-columns: 1fr; 
         grid-gap: 5px;
         justify-items: flex-start;
@@ -85,7 +85,7 @@ p{
   margin-bottom:0%;
 }
 #class{
-  text-shadow:var(--c4) 0px 0px 4px;
+  text-shadow:var(--c3) 0px 0px 10px;
 }
 
 
@@ -159,3 +159,7 @@ p{
 
   
 }
+
+
+
+
