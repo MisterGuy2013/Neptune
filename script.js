@@ -7,15 +7,36 @@ var textColor=localStorage.getItem("textColor");
 if(textColor==undefined){
   textColor="#F58A07";
 }
+var backgroundColor=localStorage.getItem("backgroundColor");
+if(backgroundColor==undefined){
+  backgroundColor="#084887";
+}
+var menuColor=localStorage.getItem("menuColor");
+if(menuColor==undefined){
+  menuColor="#909CC2";
+}
+
 var root = document.querySelector(':root');
 root.style.setProperty('--c3', textColor);
 document.getElementById("textColor").value=textColor;
+
+root.style.setProperty('--c2', backgroundColor);
+document.getElementById("backgroundColor").value=backgroundColor;
+
+root.style.setProperty('--c1', menuColor);
+document.getElementById("menuColor").value=menuColor;
 
 function updateColors(){
   console.log("E");
   root.style.setProperty('--c3', document.getElementById("textColor").value);
   localStorage.setItem("textColor", document.getElementById("textColor").value);
   
+  root.style.setProperty('--c2', document.getElementById("backgroundColor").value);
+  localStorage.setItem("backgroundColor", document.getElementById("backgroundColor").value);
+  
+  root.style.setProperty('--c1', document.getElementById("menuColor").value);
+  localStorage.setItem("menuColor", document.getElementById("menuColor").value);
+
 }
 
 
@@ -25,6 +46,32 @@ function updateCheckbox(){
   titleSet = document.getElementById("titleBox").checked;
   localStorage.setItem("title", titleSet);
 }
+
+
+
+
+
+
+function resetColorDefaults(){
+  var textColor="#F58A07";
+  var backgroundColor="#084887";
+  var menuColor="#909CC2";
+
+  var root = document.querySelector(':root');
+  root.style.setProperty('--c3', textColor);
+  document.getElementById("textColor").value=textColor;
+
+  root.style.setProperty('--c2', backgroundColor);
+  document.getElementById("backgroundColor").value=backgroundColor;
+
+  root.style.setProperty('--c1', menuColor);
+  document.getElementById("menuColor").value=menuColor;
+  updateColors();
+}
+
+
+
+
 
 
 

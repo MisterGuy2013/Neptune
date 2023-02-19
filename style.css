@@ -11,7 +11,7 @@
     font-family: sfpro;
   font-style: normal;
   font-weight: normal;
-    src: url("https://neptune.misterguy2013.repl.co/font/SF-Pro.otf") format("opentype");
+    src: url("./font/SF-Pro.otf") format("opentype");
 }
 
 
@@ -44,6 +44,7 @@ p{
 }
 
 #dropdown {
+  transition: all 0.5s;
   border-radius:10px;
   display: none;
   
@@ -62,8 +63,9 @@ p{
 }
 
 #dropdown.active {
+  
   display: grid;
-   grid-template-rows: 1fr,1fr; 
+   grid-template-rows: 1fr 1fr 1fr; 
         grid-template-columns: 1fr; 
         grid-gap: 5px;
         justify-items: flex-start;
@@ -71,7 +73,9 @@ p{
 }
 
 
-
+button{
+  border-radius:10px;
+}
 
 
 
@@ -124,10 +128,21 @@ p{
   border-radius:10px;
   width:80px;
   height:72px;
-  position:absolute;
-  top:70%;
+  display: block;
+  transform: translateY(85vh);
+  transition: all 0.5s;
   background-color:var(--c1);
   }
+  #dropdown.active{
+    
+  }
+  #menu.active{
+    display: block;
+    transform: translateY(55vh);
+
+  }
+
+
   #svg{
     width:90%;
     height:90%;

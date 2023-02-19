@@ -9,7 +9,7 @@
     <link rel="icon" type="image" href="neptune.png">
 <!https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Rounded-Regular.otf/>
     <script src="schedule.js"></script>
-    <script src="flubber.js"></script>
+    <script src="paths.js"></script>
     
     
   </head>
@@ -34,9 +34,9 @@
       }
     </style>
   </defs>
-  <path class="cls-1" id="line1" d="m15,203.31c76.4,0,152.8,0,229.19,0,82.3,0,164.61,0,246.91,0"/>
-  <path class="cls-1" id="line2" d="m16.3,15c76.4,0,139.82,0,229.19,0,82.3,0,164.61,0,246.91,0"/>
-  <path class="cls-1" id="line3" d="m15,391.62c76.4,0,139.82,0,229.19,0,82.3,0,164.61,0,246.91,0"/>
+  <path class="cls-1" id="line1" d="m471.3,408.14c-45.17-.16-49.28-.78-91.48-.32-101.62-.36-139.22-1.06-239-.84-26.21-.62-60.04-.21-90.81-.32"/>
+  <path class="cls-1" id="line2" d="m50.08,50c65.94.9,133.65,2.96,199.42,3.07,49.89.09,57.76.7,101.76,1.5,38.3.7,21.43.17,67.56,1.03,8.79.16,19.39.29,52.49.8"/>
+  <path class="cls-1" id="line3" d="m471.3,233.45c-31.87,0-22.54,0-60.07-.49-88.35-1.16-199.94-4.14-300.08-3.44-22.75.16-25.89-.05-61.15,0"/>
 </svg>
   </center>
 
@@ -50,6 +50,20 @@
     <div>
       <label class="dropdownContent" for="textColor">Text Color:</label>
   <input onchange="updateColors()" type="color" id="textColor" value="#F58A07">
+    </div>
+
+    <div>
+      <label class="dropdownContent" for="backgroundColor">Background Color:</label>
+  <input onchange="updateColors()" type="color" id="backgroundColor" value="#084887">
+    </div>
+
+    <div>
+      <label class="dropdownContent" for="menuColor">Menu Color:</label>
+  <input onchange="updateColors()" type="color" id="menuColor" value="#909CC2">
+    </div>
+
+    <div>
+        <button onclick="resetColorDefaults()">Reset Defaults</button>
     </div>
   </div>
 </div>
