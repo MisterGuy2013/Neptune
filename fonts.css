@@ -1,0 +1,18 @@
+@font-face {
+    font-family: SF Pro Rounded;
+  font-style: normal;
+  font-weight: normal;
+    src: url("./font/SF-Pro-Rounded.otf") format("opentype");
+}
+@font-face {
+    font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+    src: url("./font/SF-Pro-Text.otf") format("opentype");
+}
+@font-face {
+    font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+    src: url("./font/SF-Pro-Display.otf") format("opentype");
+}

@@ -7,12 +7,7 @@
   --c6:#74481b;;
 }
 
-@font-face {
-    font-family: sfpro;
-  font-style: normal;
-  font-weight: normal;
-    src: url("./font/SF-Pro.otf") format("opentype");
-}
+
 
 
 
@@ -21,7 +16,7 @@ body{
 }
 
 p{
-  font-family:sfpro;
+  font-family:SF Pro Display;
   color:var(--c3);
   text-shadow:var(--c3) 0px 0px 15px;
 }
@@ -129,17 +124,13 @@ button{
   width:80px;
   height:72px;
   display: block;
-  transform: translateY(85vh);
-  transition: all 0.5s;
+  transform: translateY(75vh);
+  transition: all 0.5s ease;
   background-color:var(--c1);
-  }
-  #dropdown.active{
-    
   }
   #menu.active{
     display: block;
-    transform: translateY(55vh);
-
+    transform: translateY(40vh);
   }
 
 
@@ -153,6 +144,9 @@ button{
 @media screen and (max-width: 600px) {
   #dropdown{
     min-width: 90vw;
+  }
+  p{
+    text-shadow:var(--c3) 0px 0px 5px;
   }
   
   #MainClockText {
