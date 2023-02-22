@@ -27,7 +27,7 @@ document.getElementById("backgroundColor").value=backgroundColor;
 root.style.setProperty('--c1', menuColor);
 document.getElementById("menuColor").value=menuColor;
 
-function updateColors(){
+function updateColors(userSent){
   console.log("E");
   root.style.setProperty('--c3', document.getElementById("textColor").value);
   localStorage.setItem("textColor", document.getElementById("textColor").value);
@@ -37,7 +37,9 @@ function updateColors(){
   
   root.style.setProperty('--c1', document.getElementById("menuColor").value);
   localStorage.setItem("menuColor", document.getElementById("menuColor").value);
-
+  if(userSent==true){
+    customTheme();
+  }
 }
 
 
@@ -53,32 +55,13 @@ function updateCheckbox(){
 
 
 
-function resetColorDefaults(){
-  var textColor="#F58A07";
-  var backgroundColor="#084887";
-  var menuColor="#909CC2";
-
-  var root = document.querySelector(':root');
-  root.style.setProperty('--c3', textColor);
-  document.getElementById("textColor").value=textColor;
-
-  root.style.setProperty('--c2', backgroundColor);
-  document.getElementById("backgroundColor").value=backgroundColor;
-
-  root.style.setProperty('--c1', menuColor);
-  document.getElementById("menuColor").value=menuColor;
-  updateColors();
-
-  changeFont("SF Pro Display", false);
-  document.getElementById("titleBox").checked=false;
-  updateCheckbox();
-}
 
 
 
 
 
-function changeFont(font, custom){
+
+function changeFont(userSent, font, custom){
   var p = document.querySelectorAll("p");
   var fontLink;
   if(font == null && custom == null){
@@ -112,12 +95,36 @@ function changeFont(font, custom){
   font = font.replace("+", " ");
   for(let i=0; i<p.length; i++){
       p[i].style.fontFamily=font;
-    }
+  }
+  if(userSent==true){
+    customTheme();
+  }
 }
 
 
 var font = localStorage.getItem('font');
 var custom = (localStorage.getItem('custom')=="true") ? true: false;
 if(font!=null){
-  changeFont(font, custom);
+  changeFont(false, font, custom);
+}
+
+
+
+if(localStorage.getItem("theme")==null){
+  localStorage.setItem("theme","Default");
+}
+document.getElementById("themeSelector").value = localStorage.getItem("theme");
+
+function updateTheme(){
+  var theme = document.getElementById("themeSelector").value;
+  if(theme=="Default"){
+    defaultTheme();
+  }
+  else if(theme=="Neon Cyan"){
+    cyanNeonTheme();
+  }
+}
+function customTheme(){
+  document.getElementById("themeSelector").value="Custom";
+  localStorage.setItem("theme","Custom");
 }

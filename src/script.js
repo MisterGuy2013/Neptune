@@ -141,3 +141,4 @@ replaceClock();
 setInterval(replaceClock,100);
 
 window.addEventListener("resize", checkResize);
+checkResize();

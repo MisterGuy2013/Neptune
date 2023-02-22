@@ -11,6 +11,7 @@
 <!https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Rounded-Regular.otf/>
     <script src="src/schedule.js"></script>
     <script src="src/paths.js"></script>
+    <script src="src/themes.js"></script>
     
   </head>
   
@@ -43,27 +44,27 @@
   
   <div id="dropdown">
     <div>
-    <label for="titleBox" class="dropdownContent">Show Time in Title </label><input type="checkbox" id="titleBox" class="dropdownContent" onclick="updateCheckbox()">
+    <label for="titleBox" class="dropdownContent">Show Time in Title </label>
+    </div><div>
+      <input type="checkbox" id="titleBox" class="dropdownContent switch" onclick="updateCheckbox()">
     </div>
 
     
     <div>
-      <label class="dropdownContent" for="textColor">Text Color:</label>
-  <input onchange="updateColors()" type="color" id="textColor" value="#F58A07">
-    </div>
-
+      <label class="dropdownContent" for="themes">Theme:</label></div>
+      <div >
+      <select onchange="updateTheme()" id="themeSelector">
+        <option>Default</option>
+        <option>Neon Cyan</option>
+        <option>Custom</option>
+      </select>
+        </div>
+    
     <div>
-      <label class="dropdownContent" for="backgroundColor">Background Color:</label>
-  <input onchange="updateColors()" type="color" id="backgroundColor" value="#084887">
-    </div>
-
+    <label class="dropdownContent">Font:</label>
+  </div>
     <div>
-      <label class="dropdownContent" for="menuColor">Menu Color:</label>
-  <input onchange="updateColors()" type="color" id="menuColor" value="#909CC2">
-    </div>
-
-    <div>
-      <select onchange="changeFont()" id="fontSelector">
+      <select onchange="changeFont(true)" id="fontSelector">
         <option>SF Pro Display</option>
         <option>SF Pro Rounded</option>
         <option>SF Pro Text</option>
@@ -81,8 +82,25 @@
         <option>Custom</option>
       </select>
     </div>
+
+
+    
     <div>
-        <button onclick="resetColorDefaults()">Reset Defaults</button>
+      <label class="dropdownContent" for="textColor">Text Color:</label></div>
+      <div>
+  <input onchange="updateColors(true)" type="color" id="textColor" value="#F58A07">
+        </div>
+
+    <div>
+      <label class="dropdownContent" for="backgroundColor">Background Color:</label></div>
+    <div>
+  <input onchange="updateColors(true)" type="color" id="backgroundColor" value="#084887">
+    </div>
+
+    <div>
+      <label class="dropdownContent" for="menuColor">Menu Color:</label></div>
+    <div>
+  <input onchange="updateColors(true)" type="color" id="menuColor" value="#909CC2">
     </div>
   </div>
 </div>
