@@ -1,142 +1,111 @@
- <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Neptune</title>
-    <meta name = "charset" charset = "utf-8">
-    <meta name = "viewport" content = "width=device-width">
-    <link rel = "stylesheet" type = "text/css" href = "style.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine|Droid+Sans|Josefin+Slab|Arvo|Abril+Fatface|Ubuntu|Old+Standard+TT|Lobster|Bevan">
-    <link rel="icon" type="image" href="neptune.png">
-<!https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Rounded-Regular.otf/>
-    <script src="src/schedule.js"></script>
-    <script src="src/paths.js"></script>
-    <script src="src/themes.js"></script>
-    
-  </head>
-  
-  <body>
 
-<div id="menu">
-<center>
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="-50 -90 630 630">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: none;
-        stroke: #231f20;
-        stroke-linecap: round;
-        stroke-width: 100px;
-      }
+<head>
+  <title>Neptune</title>
+  <meta name="charset" charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Tangerine|Droid+Sans|Josefin+Slab|Arvo|Abril+Fatface|Ubuntu|Old+Standard+TT|Lobster|Bevan">
+  <link rel="icon" type="image" href="neptune.png">
+  <!https: //github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Rounded-Regular.otf />
+  <script src="src/schedule.js"></script>
+  <script src="src/paths.js"></script>
+  <script src="src/themes.js"></script>
+</head>
 
-      .cls-2 {
-        fill: #231f20;
-      }
-    </style>
-  </defs>
-  <path class="cls-1" id="line1" d="m471.3,408.14c-45.17-.16-49.28-.78-91.48-.32-101.62-.36-139.22-1.06-239-.84-26.21-.62-60.04-.21-90.81-.32"/>
-  <path class="cls-1" id="line2" d="m50.08,50c65.94.9,133.65,2.96,199.42,3.07,49.89.09,57.76.7,101.76,1.5,38.3.7,21.43.17,67.56,1.03,8.79.16,19.39.29,52.49.8"/>
-  <path class="cls-1" id="line3" d="m471.3,233.45c-31.87,0-22.54,0-60.07-.49-88.35-1.16-199.94-4.14-300.08-3.44-22.75.16-25.89-.05-61.15,0"/>
-</svg>
-  </center>
-
-  
-  <div id="dropdown">
-    <div>
-    <label for="titleBox" class="dropdownContent">Show Time in Title </label>
-    </div><div>
-      <input type="checkbox" id="titleBox" class="dropdownContent switch" onclick="updateCheckbox()">
-    </div>
-
-    
-    <div>
-      <label class="dropdownContent" for="themes">Theme:</label></div>
-      <div >
-      <select onchange="updateTheme()" id="themeSelector">
-        <option>Default</option>
-        <option>Neon Cyan</option>
-        <option>Custom</option>
-      </select>
-        </div>
-    
-    <div>
-    <label class="dropdownContent">Font:</label>
-  </div>
-    <div>
-      <select onchange="changeFont(true)" id="fontSelector">
-        <option>SF Pro Display</option>
-        <option>SF Pro Rounded</option>
-        <option>SF Pro Text</option>
-        <option>Tangerine</option>
-        <option>Droid Sans</option>
-        <option>Josefin Slab</option>
-        <option>Arvo</option>
-        <option>Abril Fatface</option>
-        <option>Ubuntu</option>
-        <option>Old Standard TT</option>
-        <option>Arial Black</option>
-        <option>Times New Roman</option>
-        <option>Lobster</option>
-        <option>Bevan</option>
-        <option>Custom</option>
-      </select>
-    </div>
-
-
-    
-    <div>
-      <label class="dropdownContent" for="textColor">Text Color:</label></div>
-      <div>
-  <input onchange="updateColors(true)" type="color" id="textColor" value="#F58A07">
-        </div>
-
-    <div>
-      <label class="dropdownContent" for="backgroundColor">Background Color:</label></div>
-    <div>
-  <input onchange="updateColors(true)" type="color" id="backgroundColor" value="#084887">
-    </div>
-
-    <div>
-      <label class="dropdownContent" for="menuColor">Menu Color:</label></div>
-    <div>
-  <input onchange="updateColors(true)" type="color" id="menuColor" value="#909CC2">
-    </div>
-  </div>
-</div>
-    
-
-
-
-
-    
+<body>
+  <div id="menu">
     <center>
-      <div>
-        <h1 id="mainSec">
-          <p id="class">Class Loading</p>
-        </h1>
-        
+      <?xml version="1.0" encoding="UTF-8"?><svg id="svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+        viewBox="-50 -90 630 630">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #231f20;
+              stroke-linecap: round;
+              stroke-width: 100px;
+            }
 
-        <center><h1 id="main"> 
+            .cls-2 {
+              fill: #231f20;
+            }
+          </style>
+        </defs>
+        <path class="cls-1" id="line1"
+          d="m471.3,408.14c-45.17-.16-49.28-.78-91.48-.32-101.62-.36-139.22-1.06-239-.84-26.21-.62-60.04-.21-90.81-.32" />
+        <path class="cls-1" id="line2"
+          d="m50.08,50c65.94.9,133.65,2.96,199.42,3.07,49.89.09,57.76.7,101.76,1.5,38.3.7,21.43.17,67.56,1.03,8.79.16,19.39.29,52.49.8" />
+        <path class="cls-1" id="line3"
+          d="m471.3,233.45c-31.87,0-22.54,0-60.07-.49-88.35-1.16-199.94-4.14-300.08-3.44-22.75.16-25.89-.05-61.15,0" />
+      </svg>
+    </center>
+    <div id="dropdown">
+      <div><label for="titleBox" class="dropdownContent">Show Time in Title </label></div>
+      <div><input type="checkbox" id="titleBox" class="dropdownContent switch" onclick="updateCheckbox()"></div>
+      <div><label class="dropdownContent" for="themes">Theme:</label></div>
+      <div><select onchange="updateTheme()" id="themeSelector">
+          <option>Default</option>
+          <option>Neon Cyan</option>
+          <option>Crimson</option>
+          <option>Custom</option>
+        </select></div>
+      <div><label class="dropdownContent">Font:</label></div>
+      <div><select onchange="changeFont(true)" id="fontSelector">
+          <option>SF Pro Display</option>
+          <option>SF Pro Rounded</option>
+          <option>SF Pro Text</option>
+          <option>Tangerine</option>
+          <option>Droid Sans</option>
+          <option>Josefin Slab</option>
+          <option>Arvo</option>
+          <option>Abril Fatface</option>
+          <option>Ubuntu</option>
+          <option>Old Standard TT</option>
+          <option>Arial Black</option>
+          <option>Times New Roman</option>
+          <option>Lobster</option>
+          <option>Bevan</option>
+          <option>Custom</option>
+        </select></div>
+      <div><label class="dropdownContent" for="dropShadow">Drop Shadow:</label></div>
+      <div><input type="range" min="0" max="15" value="10" class="dropShadow" id="dropShadow"
+          onchange="updateShadow(true)"></div>
+      <div><label class="dropdownContent" for="textColor">Text Color:</label></div>
+      <div><input onchange="updateColors(true)" type="color" id="textColor" value="#F58A07"></div>
+      <div><label class="dropdownContent" for="backgroundColor">Background Color:</label></div>
+      <div><input onchange="updateColors(true)" type="color" id="backgroundColor" value="#084887"></div>
+      <div><label class="dropdownContent" for="menuColor">Menu Color:</label></div>
+      <div><input onchange="updateColors(true)" type="color" id="menuColor" value="#909CC2"></div>
+    </div>
+  </div>
+  <center>
+    <div>
+      <h1 id="mainSec">
+        <p id="class">Class Loading</p>
+      </h1>
+      <center>
+        <h1 id="main">
           <div id="MainClockText">
+            
             <div class="hourSetup">
               <p id="hours">Time Loading</p>
             </div>
-            
             <div class="colon hourSetup">
               <p>:</p>
             </div>
-          <div>
+            <div>
               <p id="minutes">Time Loading</p>
             </div>
-            
             <div class="colon">
               <p>:</p>
             </div>
             <div>
               <p id="seconds">Time Loading</p>
             </div>
-
             <div class="hourSetup">
               <p class="label">Hours</p>
             </div>
@@ -149,15 +118,14 @@
               <p class="label">Secs</p>
             </div>
 
-            
           </div>
-        </h1></center>
-        
-      </div>
-    </center>
+        </h1>
+      </center>
+    </div>
+  </center>
+  <script src="src/selectorMenu.js"></script>
+  <script src="src/script.js"></script>
+  <script src="src/neptuneMenu.js"></script>
+</body>
 
-    <script src="src/selectorMenu.js"></script>
-    <script src="src/script.js"></script>
-    <script src="src/neptuneMenu.js"></script>
-    </body>
 </html>

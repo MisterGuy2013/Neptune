@@ -49,8 +49,8 @@ function getPeriod(classList) {
     var currentSec = calculateSeconds(date.getHours(), date.getMinutes(), date.getSeconds());
     var classStartSec = calculateSeconds(classList[i].sHour, classList[i].sMin, 0);
     var classEndSec = calculateSeconds(classList[i].eHour, classList[i].eMin, 0);
-
-    if ((classStartSec <= currentSec) && (currentSec < classEndSec)) {
+//console.log(classStartSec+" "+ currentSec+" "+classEndSec);
+    if ((classStartSec <= currentSec)&&(currentSec < classEndSec)) {
       return i;
     }
 

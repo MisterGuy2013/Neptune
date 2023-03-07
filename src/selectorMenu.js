@@ -123,8 +123,28 @@ function updateTheme(){
   else if(theme=="Neon Cyan"){
     cyanNeonTheme();
   }
+  else if(theme=="Crimson"){
+    crimsonTheme();
+  }
 }
 function customTheme(){
   document.getElementById("themeSelector").value="Custom";
   localStorage.setItem("theme","Custom");
+}
+
+if(localStorage.getItem("dropShadow")==null){
+  localStorage.setItem("dropShadow","1");
+}
+var root = document.querySelector(':root');
+root.style.setProperty('--dropShadow', localStorage.getItem("dropShadow"));
+document.getElementById("dropShadow").value = localStorage.getItem("dropShadow")*10;
+
+function updateShadow(userSent){
+  var shadow = document.getElementById("dropShadow").value/10;
+  var root = document.querySelector(':root');
+  root.style.setProperty('--dropShadow', shadow);
+  localStorage.setItem("dropShadow",shadow);
+  if(userSent==true){
+    customTheme();
+  }
 }
