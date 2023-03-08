@@ -42,10 +42,10 @@ function calculateSeconds(hours, minutes, seconds) {
 }
 
 function getPeriod(classList) {
-  var date = new Date;
 
   for (let i = 0; i < classList.length; i++) {
     var date = new Date;
+    //vr currentSec = calculateSeconds(12,10,15);//date.getHours(), date.getMinutes(), date.getSeconds());
     var currentSec = calculateSeconds(date.getHours(), date.getMinutes(), date.getSeconds());
     var classStartSec = calculateSeconds(classList[i].sHour, classList[i].sMin, 0);
     var classEndSec = calculateSeconds(classList[i].eHour, classList[i].eMin, 0);
@@ -78,6 +78,7 @@ function replaceClock() {
   var classList;
   var replaceText;
   var replaceClass;
+  var lunch;
   //var menuMessage;
 
   if (flexDay() == false) {
@@ -88,11 +89,77 @@ function replaceClock() {
   }
   
   period = getPeriod(classList);
-  
   if(period!=-1){
     var classData = classList[period];
     nextH = classData.eHour;
     nextM = classData.eMin;
+    lunch = classData.Lunch;
+
+    var timesStart, timesEnd;
+    if(lunch==false){
+      document.getElementById("lunchMenu").classList.remove("active");
+    }
+    else{
+      document.getElementById("lunchMenu").classList.add("active");
+      var lunchNum = getPeriod(lunch);
+      var label1, label2;
+      if(lunchNum!=-1){
+        var lunchData= lunch[lunchNum];
+        var lunchData2 = lunch[lunchNum+1];
+        endH = lunchData.eHour;
+        endM = lunchData.eMin;
+        startH = lunchData2.sHour;
+        startM = lunchData2.sMin;
+        timesEnd = timeUntil(endH, endM).split("|");
+        timesStart = timeUntil(startH, startM).split("|");
+        label1 = lunchData.name+ " Ending in";
+        label2 = lunchData2.name+ " Starting in";
+        if(lunchData2.name=="END"){
+          document.getElementById("lunchLabel2").classList.add("end");
+          document.getElementById("Lunchsection").classList.add("end");
+          document.getElementById("LunchLabels").classList.add("end");
+          document.getElementById("startingLunchTime").classList.add("end");
+        }
+        else{
+          document.getElementById("lunchLabel2").classList.remove("end");
+          document.getElementById("Lunchsection").classList.remove("end");
+          document.getElementById("LunchLabels").classList.remove("end");
+          document.getElementById("startingLunchTime").classList.remove("end");
+        }
+      }
+      else{
+        lunchNum = getInbetween(lunch);
+        var lunchData = lunch[lunchNum];
+        var lunchData2 = lunch[lunchNum+1];
+        endH = lunchData.sHour;
+        endM = lunchData.sMin;
+        startH = lunchData2.sHour;
+        startM = lunchData2.sMin;
+        timesEnd = timeUntil(endH, endM).split("|");
+        timesStart = timeUntil(startH, startM).split("|");
+        label1 = lunchData.name+ " Starting in";
+        label2 = lunchData2.name+ " Starting in";
+        if(lunchData2.name=="END"){
+          document.getElementById("lunchLabel2").classList.add("end");
+          document.getElementById("Lunchsection").classList.add("end");
+          document.getElementById("LunchLabels").classList.add("end");
+          document.getElementById("startingLunchTime").classList.add("end");
+        }
+        else{
+          document.getElementById("lunchLabel2").classList.remove("end");
+          document.getElementById("Lunchsection").classList.remove("end");
+          document.getElementById("LunchLabels").classList.remove("end");
+          document.getElementById("startingLunchTime").classList.remove("end");
+        }
+      }
+      document.getElementById("lunchEndSec").innerText=timesEnd[2];
+      document.getElementById("lunchEndMin").innerText=timesEnd[1];
+      document.getElementById("lunchStartSec").innerText=timesStart[2];
+      document.getElementById("lunchStartMin").innerText=timesStart[1];
+
+      document.getElementById("lunchLabel1").innerText=label1;
+      document.getElementById("lunchLabel2").innerText=label2;
+    }
     replaceText = timeUntil(nextH, nextM).split("|");
     
     replaceClass = classData.name + " Ending in";
@@ -101,12 +168,14 @@ function replaceClock() {
   else{
     var nextDay=false;
     period = getInbetween(classList);
-    
+    document.getElementById("Lunchsection").classList.remove("active");
     if(period==classList.length-1){
       nextDay=true;
     }
     var classData = classList[period];
-      
+    if(classData.Lunch==false){
+      document.getElementById("lunchMenu").classList.remove("active");
+    }
     nextH = classData.sHour;
     nextM = classData.sMin;
     replaceText = timeUntil(nextH, nextM).split("|");

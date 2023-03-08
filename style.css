@@ -40,6 +40,7 @@ p{
 }
 
 
+
 #dropdown {
   transition: all 0.5s;
   border-radius:10px;
@@ -99,16 +100,112 @@ button{
         justify-items: center;
         align-items: center;
 }
+
+#lunchMenu{
+  display:none;
+}
+#lunchMenu.active{
+  display:inline;
+}
+
+#Lunchsection{
+  font-size:3.5vw;
+  display: grid;
+        grid-template-rows: 10vh 10vh; 
+        grid-template-columns: 0fr 1fr 0fr 1fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+}
+
+.lunchtext{
+  display: grid;
+        grid-template-rows: 10vh 10vh; 
+        grid-template-columns: 1fr 0.1fr  1fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+}
+
 .colon{
   font-size:7vw;
 }
+.lunchcolon{
+  font-size:4vw;
+}
+
 .label{
   font-size:2vw;
   text-shadow:var(--c3) 0px 0px calc(3.5vw * var(--dropShadow));
 }
+.lunchlabel{
+    font-size:1.5vw;
+  }
+
+#LunchLabels{
+  font-size:3.7vw;
+  display: grid;
+        grid-template-rows: 10vh 10vh; 
+        grid-template-columns: 0fr 1fr 0fr  1fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+}
+
+
+#LunchLabels.end{
+  font-size:3.7vw;
+  display: grid;
+        grid-template-rows: 10vh 5vh; 
+        grid-template-columns: 0.5fr 1fr 0.5fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+  }
+  #Lunchsection.end{
+      font-size:7.5vw;
+      display: grid;
+        grid-template-rows: 10vh 10vh; 
+        grid-template-columns: 0.5fr 1fr 0.5fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+  }
+  #startingLunchTime.end{
+    display: none;
+  }
+  #lunchLabel2.end{
+    display:none
+  }
+
 
 
 @media screen and (max-width: 900px) {
+  #LunchLabels{
+  font-size:3.7vw;
+  display: grid;
+        grid-template-rows: 10vh 5vh; 
+        grid-template-columns: 0.5fr 1fr 0.5fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+  }
+  #Lunchsection{
+      font-size:7.5vw;
+      display: grid;
+        grid-template-rows: 10vh 10vh; 
+        grid-template-columns: 0.5fr 1fr 0.5fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+  }
+  #startingLunchTime{
+    display: none;
+  }
+  #lunchLabel2{
+    display:none
+  }
+  
   #class{
     text-shadow:var(--c3) 0px 0px calc(2.0vw * var(--dropShadow));
 }
@@ -128,11 +225,17 @@ button{
     .label{
       font-size:4vw;
     }
+  .lunchlabel{
+    font-size:2vw;
+  }
       #MainClockText {
           font-size:13vw;
         }
   .colon{
   font-size:10vw;
+}
+.lunchcolon{
+  font-size:6vw;
 }
   #menu{
   border-radius:10px;
@@ -156,6 +259,25 @@ button{
 }
 
 @media screen and (max-width: 600px) {
+#LunchLabels{
+  font-size:5vw;
+  display: grid;
+        grid-template-rows: 5vh 3vh; 
+        grid-template-columns: 0.5fr 1fr 0.5fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+  }
+  #Lunchsection{
+      font-size:7.5vw;
+      display: grid;
+        grid-template-rows: 5vh 5vh; 
+        grid-template-columns: 0.5fr 1fr 0.5fr; 
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+  }
+  
   #class{
   text-shadow:var(--c3) 0px 0px calc(1.5vw * var(--dropShadow));
 }
@@ -167,6 +289,9 @@ button{
   }
   .label{
     text-shadow:var(--c3) 0px 0px calc(1.5vw * var(--dropShadow));
+  }
+  .lunchcolon{
+    font-size:8.5vw;
   }
   
   
@@ -185,6 +310,12 @@ button{
     }
   .hourSetup{
     display:none;
+  }
+
+
+  
+  .lunchlabel{
+    font-size:3vw;
   }
 
   
