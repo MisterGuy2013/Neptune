@@ -1,5 +1,5 @@
 var noHour=false;
-
+var halfDay = false;
 
 function getCurrentTime() {
   return Date.get();
@@ -86,6 +86,9 @@ function replaceClock() {
   }
   else{
     classList=flexClassTime();
+  }
+  if(halfDay==true){
+    classList=halfDayTime();
   }
   
   period = getPeriod(classList);
@@ -211,3 +214,82 @@ setInterval(replaceClock,100);
 
 window.addEventListener("resize", checkResize);
 checkResize();
+
+
+
+function httpGet(theUrl){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, true ); // false for synchronous request
+    xmlHttp.send( null );
+    console.log(xmlHttp.responseText);
+    if(xmlHttp.responseText=="success"){
+      localStorage.setItem("seen",true);
+    }
+    return xmlHttp.responseText;
+}
+function httpReqWParam(theURL){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theURL, true ); // false for synchronous request
+    xmlHttp.send( null );
+    console.log(xmlHttp.responseText);
+    if(xmlHttp.responseText!=undefined){
+      
+      localStorage.setItem("seenDatabaseNew",true);
+      if(localStorage.getItem("useridnew")=="NEW"||null||""){
+        console.log("YOU")
+        localStorage.setItem("useridnew",xmlHttp.responseText);
+      }
+      console.log(xmlHttp.responseText);
+    }
+    return xmlHttp.responseText;
+}
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
+
+
+
+/*
+
+var seen = localStorage.getItem("seen");
+
+if(seen==undefined){
+  httpGet("https://neptuneserver.misterguy2013.repl.co/newUser");
+}
+
+//new seen for the new database structure
+var seenDatabase = localStorage.getItem("seenDatabaseNew");
+
+if(seenDatabase==undefined){
+  seenDatabase=false;
+}
+else if(seenDatabase=="true"){
+  seenDatabase=true;
+}
+console.log(seenDatabase);
+var theme = localStorage.getItem("theme");
+if(theme==null){
+  theme="Default";
+}
+var hexvalue=`${localStorage.getItem("textColor")}-${localStorage.getItem("backgroundColor")}-${localStorage.getItem("menuColor")}`;
+hexvalue = hexvalue.replaceAll("#",">");
+console.log(hexvalue+font);
+try{
+if(localStorage.getItem("useridnew").length!=8){
+  localStorage.setItem("useridnew",makeid(8));
+}
+}
+catch{
+  localStorage.setItem("useridnew",makeid(8));
+}
+httpReqWParam(`https://neptuneserver.misterguy2013.repl.co/views?used=${seenDatabase}&theme=${theme}&hex=${hexvalue}&font=${localStorage.getItem('font')}&userID=${localStorage.getItem("useridnew")}`);*/
+
+//it doesn't really work

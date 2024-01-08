@@ -58,6 +58,7 @@ p{
   font-size:20px;
   color:black;
   text-shadow:black 0px 0px 0px;
+  transition:opacity;
 }
 
 #dropdown.active {
@@ -120,7 +121,7 @@ button{
 
 .lunchtext{
   display: grid;
-        grid-template-rows: 10vh 10vh; 
+        grid-template-rows: 5vh 5vh; 
         grid-template-columns: 1fr 0.1fr  1fr; 
         grid-gap: 5px;
         justify-items: center;
@@ -143,9 +144,9 @@ button{
   }
 
 #LunchLabels{
-  font-size:3.7vw;
+  font-size:3.5vw;
   display: grid;
-        grid-template-rows: 10vh 10vh; 
+        grid-template-rows: 10vh 5vh; 
         grid-template-columns: 0fr 1fr 0fr  1fr; 
         grid-gap: 5px;
         justify-items: center;
@@ -317,11 +318,19 @@ button{
   .lunchlabel{
     font-size:3vw;
   }
-
   
 }
 
 
+
+
+@media screen and (min-height: 900px) {
+    #MainClockText {
+      grid-template-rows:7vh 5vh;
+      grid-template-columns:1fr 0.1fr  1fr;
+      font-size:15vw;
+    }
+  }
 
 
 

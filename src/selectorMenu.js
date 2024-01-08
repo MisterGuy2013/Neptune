@@ -71,6 +71,8 @@ function changeFont(userSent, font, custom){
       fontLink = prompt("Paste Link from Google Fonts");
       font = fontLink.split("/");
       font = font[font.length-1];
+      font = font.split("?")[0];
+      console.log(font);
       if(font == ""){
         font = "SF Pro Rounded";
         custom = false;
