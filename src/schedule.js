@@ -30,7 +30,7 @@ function flexClassTime() {
           { "sMin": 43, "sHour": 11, "eHour": 12, "eMin": 03, "name": "First Lunch" },
           { "sMin": 10, "sHour": 12, "eHour": 12, "eMin": 30, "name": "Second Lunch" },
           { "sMin": 33, "sHour": 12, "eHour": 12, "eMin": 57, "name": "Third Lunch" },
-          { "sMin": 04, "sHour": 13, "eHour": 13, "eMin": 24, "name": "Fourth Lunch" },
+          { "sMin": 00, "sHour": 13, "eHour": 13, "eMin": 24, "name": "Fourth Lunch" },
           { "sMin": 25, "sHour": 13, "eHour": 13, "eMin": 26, "name": "END" },
         ]
     },
