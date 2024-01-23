@@ -1,5 +1,6 @@
 var noHour=false;
 var halfDay = false;
+var finalDay = true;
 
 function getCurrentTime() {
   return Date.get();
@@ -87,8 +88,12 @@ function replaceClock() {
   else{
     classList=flexClassTime();
   }
+  
   if(halfDay==true){
     classList=halfDayTime();
+  }
+  if(finalsDay == true){
+    classList = finalsTime();
   }
   
   period = getPeriod(classList);
