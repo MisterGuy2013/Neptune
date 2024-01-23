@@ -1,6 +1,6 @@
 var noHour=false;
 var halfDay = false;
-var finalDay = true;
+var finalsDay = true;
 
 function getCurrentTime() {
   return Date.get();
