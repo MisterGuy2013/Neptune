@@ -49,3 +49,13 @@ function halfDayTime() {
     { "sHour": 7, "sMin": 55, "eHour": 9, "eMin": 0, "name": "Period 1", "Lunch": false }
   ];//for the next day
 }
+
+
+function finalsTime() {
+  return [
+    { "sHour": 7, "sMin": 55, "eHour": 9, "eMin": 30, "name": "Final 1", "Lunch": false },
+    { "sHour": 9, "sMin": 30, "eHour": 9, "eMin": 45, "name": "Break", "Lunch": false },
+    { "sHour": 9, "sMin": 45, "eHour": 11, "eMin": 20, "name": "Final 2", "Lunch": false },
+    { "sHour": 7, "sMin": 55, "eHour": 9, "eMin": 0, "name": "Final 1", "Lunch": false }
+  ];//for the next day
+}
