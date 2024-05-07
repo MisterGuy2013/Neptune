@@ -77,3 +77,28 @@ function crimsonTheme(){
   document.getElementById("dropShadow").value=3;
   updateShadow(false);
 }
+
+function blockTheme(){
+  localStorage.setItem("theme","Block");
+  var textColor="#fff672";
+  var backgroundColor="#20002d";
+  var menuColor="#8d1382";
+
+  var root = document.querySelector(':root');
+  root.style.setProperty('--c3', textColor);
+  document.getElementById("textColor").value=textColor;
+
+  root.style.setProperty('--c2', backgroundColor);
+  document.getElementById("backgroundColor").value=backgroundColor;
+
+  root.style.setProperty('--c1', menuColor);
+  document.getElementById("menuColor").value=menuColor;
+  updateColors();
+
+  changeFont(false, "Nabla", false);
+  // document.getElementById("titleBox").checked=false;
+  // updateCheckbox();
+  document.getElementById("dropShadow").value=1;
+  updateShadow(false);
+}
+
