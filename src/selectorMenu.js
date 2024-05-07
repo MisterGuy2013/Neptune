@@ -128,6 +128,9 @@ function updateTheme(){
   else if(theme=="Crimson"){
     crimsonTheme();
   }
+  else if(theme=="Block"){
+    blockTheme();
+  }
 }
 function customTheme(){
   document.getElementById("themeSelector").value="Custom";
