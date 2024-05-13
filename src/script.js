@@ -1,5 +1,5 @@
 var noHour=false;
-var halfDay = true;
+var halfDay = false;
 var finalsDay = false;
 
 function getCurrentTime() {
