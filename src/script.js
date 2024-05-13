@@ -2,6 +2,12 @@ var noHour=false;
 var halfDay = false;
 var finalsDay = false;
 
+document.getElementById("halfBox").checked = halfDay;
+
+function updateHalfDay(){
+  halfDay = document.getElementById("halfBox").checked;
+}
+
 function getCurrentTime() {
   return Date.get();
 }
