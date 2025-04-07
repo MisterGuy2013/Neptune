@@ -82,7 +82,7 @@ function blockTheme(){
   localStorage.setItem("theme","Block");
   var textColor="#fff672";
   var backgroundColor="#20002d";
-  var menuColor="#8d1382";
+  var menuColor="#909CC2";
 
   var root = document.querySelector(':root');
   root.style.setProperty('--c3', textColor);
