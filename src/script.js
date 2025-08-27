@@ -1,6 +1,8 @@
 var noHour=false;
 var halfDay = false;
-var finalsDay = true;
+var finalsDay = false;
+
+
 
 document.getElementById("halfBox").checked = halfDay;
 
